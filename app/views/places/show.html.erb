@@ -4,7 +4,7 @@
 <ul>
   <% @entries.each do |entry| %>
     <li>
-      <strong><%= entry["title"] %></strong> (<%= entry["posted_on"] %>)<br>
+      <strong><%= entry["title"] %></strong> (<%= entry["occurred_on"] %>)<br>
       <%= entry["description"] %>
     </li>
   <% end %>
@@ -12,8 +12,7 @@
 
 <hr>
 
-<p>
-  <a href="/entries/new?place_id=<%= @place["id"] %>">Add a New Entry</a>
+<p><a href="/entries/new?place_id=<%= @place["id"] %>">Add a New Entry</a>
 </p>
 
 <p>

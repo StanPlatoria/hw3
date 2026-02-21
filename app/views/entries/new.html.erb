@@ -1,0 +1,24 @@
+<h1>New Entry for <%= @place["name"] %></h1>
+
+<form action="/entries" method="post">
+  <input type="hidden" name="place_id" value="<%= @place["id"] %>">
+
+  <p>
+    <label for="title_field">Title</label><br>
+    <input type="text" name="title" id="title_field">
+  </p>
+
+  <p>
+    <label for="description_field">Description</label><br>
+    <textarea name="description" id="description_field"></textarea>
+  </p>
+
+  <p>
+    <label for="date_field">Date</label><br>
+    <input type="date" name="occurred_on" id="date_field">
+  </p>
+
+  <button>Post Entry</button>
+</form>
+
+<a href="/places/<%= @place["id"] %>">Cancel</a>
